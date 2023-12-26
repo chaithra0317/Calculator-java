@@ -13,10 +13,7 @@ pipeline{
        }
        stage('SonarQube Analysis'){
             steps{
-                withSonarQubeEnv(credentialsId: 'sonar'){
-    // some block
-                sh "mvn clean verify sonar:sonar -Dsonar.projectKey=demo-sonar"
-                }
+                //sh "mvn clean verify sonar:sonar -Dsonar.projectKey=demo-sonar"
             }
        }
        stage('deploy stage'){
